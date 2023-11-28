@@ -1,0 +1,66 @@
+body {
+    margin: 0px;
+    background-color: antiquewhite;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 13% 1fr;
+    grid-template-rows: 60px 85vh 60vh 25vh;
+    grid-template-areas:
+        'he na'
+        'ma ma'
+        'ar ar'
+        'fo fo'
+}
+
+
+
+#header {
+    grid-area: he;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#nav {
+    grid-area: na;
+    background-color: rgb(244, 232, 222);
+}
+
+main {
+    grid-area: ma;
+    display: flex ;
+    flex-direction: column;
+    color: honeydew;
+    font-size: 4.5rem;
+    align-items: center ;
+    justify-content: center;
+    background-image: url(/img/new_main.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+main h1,
+h6 {
+    margin: 0px;
+}
+
+
+
+article {
+    grid-area: ar;
+    background-color: white;
+}
+
+footer {
+    grid-area: fo;
+    background-color: #0e6856;
+}

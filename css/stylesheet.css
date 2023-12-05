@@ -63,7 +63,7 @@ main {
     grid-area: ma;
     display: flex ;
     flex-direction: column;
-    color: honeydew;
+    color: white;
     font-size: 4.5rem;
     align-items: center ;
     justify-content: center;
@@ -120,4 +120,30 @@ footer {
     grid-area: fo;
     background-color: #0e6856;
     height: 25vh;
+}
+
+
+
+#articleImageOne{
+    width: 1500px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/article_v3.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    padding:10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#articleImageOne p{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
 }

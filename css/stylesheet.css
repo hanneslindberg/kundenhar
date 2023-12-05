@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+
+
 body {
     margin: 0px;
-    background-color: antiquewhite;
-
 }
 
 html {
@@ -11,9 +13,8 @@ html {
 #wrapper {
     display: grid;
     grid-template-columns: 13% 1fr;
-    grid-template-rows: 60px 85vh 60vh 25vh;
+    grid-template-rows: 85vh auto auto;
     grid-template-areas:
-        'he na'
         'ma ma'
         'ar ar'
         'fo fo'
@@ -22,16 +23,40 @@ html {
 
 
 #header {
-    grid-area: he;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 0px 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
 }
 
 #nav {
-    grid-area: na;
-    background-color: rgb(244, 232, 222);
+    flex: 1;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nav a{
+    text-decoration: none;
+    color: #0e6856;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#nav a:hover{
+    transition: all 0.2s ease-in-out; 
+    color:#0e68566d;
 }
 
 main {
@@ -45,11 +70,18 @@ main {
     background-image: url(/img/new_main.jpg);
     background-position: center;
     background-size: cover;
+    font-family: 'Rubik', sans-serif;    
+}
+
+main h1{
+    margin: 0;
+    color: transparent; 
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: white;
     
 }
 
-main h1,
-h6 {
+ h6 {
     margin: 0px;
 }
 
@@ -57,10 +89,35 @@ h6 {
 
 article {
     grid-area: ar;
-    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 250px;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    height: 10px;
 }
+
+article p {
+    width: 70%;
+    margin: 0px;
+}
+
+article h2{
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+article img{
+    width: 500px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+}
+
+
 
 footer {
     grid-area: fo;
     background-color: #0e6856;
+    height: 25vh;
 }

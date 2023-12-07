@@ -13,7 +13,7 @@ html {
 #wrapper {
     display: grid;
     grid-template-columns: 13% 1fr;
-    grid-template-rows: 85vh auto auto;
+    grid-template-rows: 90vh auto auto;
     grid-template-areas:
         'ma ma'
         'ar ar'
@@ -42,7 +42,7 @@ header a {
     flex: 1;    
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
@@ -116,15 +116,13 @@ article img{
 
 
 
-footer {
+#footer {
     grid-area: fo;
     background-color: #0e6856;
     height: 25vh;
 }
 
-
-
-#articleImageOne{
+#articleImageOne {
     width: 1500px;
     height: 250px;
     border-radius: 2rem;
@@ -139,11 +137,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    transition: all 0.1s ease-in-out;
 }
 
 #articleImageOne p{
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 40px;
+   
+}
+
+#articleImageOne:hover{
+    transform: scale(1.02);
 }

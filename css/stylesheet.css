@@ -12,22 +12,20 @@ html {
 
 #wrapper {
     display: grid;
-    grid-template-columns: 13% 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 90vh auto auto;
     grid-template-areas:
-        'ma ma'
-        'ar ar'
-        'fo fo'
+        'ma ma ma'
+        'ar ar ar'
+        'fo1 fo2 fo3'
 }
-
-
 
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.1);
     position: relative;
     padding: 0px 20px;
     font-family: 'Rubik', sans-serif;
@@ -59,7 +57,80 @@ header a {
     color:#0e68566d;
 }
 
-main {
+.fo1 {
+    grid-area: fo1;
+    background-color: #0e6856;
+    height: 25vh;
+    color: white;
+
+    padding: 1rem;
+
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column;    
+}
+
+.fo1 h5 {
+    margin-top: 2rem;
+    margin-bottom: 1px;
+    margin-left: 3rem;
+}
+
+.fo1 p {
+    margin-top: 2px;
+    margin-left: 3rem;
+    text-decoration: underline;
+}
+
+.fo2 {
+    grid-area: fo2;
+    background-color: #0e6856;
+    height: 25vh;
+    color: white;
+
+    padding: 1rem;
+
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.fo2 p {
+    margin: 1rem;
+    text-decoration: underline;
+}
+
+.fo3 {
+    grid-area: fo3;
+    background-color: #0e6856;
+    height: 25vh;
+    color: white;
+
+    padding: 1rem;
+
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: end;
+    justify-content: center;
+}
+
+.fo3 a {
+    text-decoration: underline;
+    color: white;
+    
+    margin: 1rem;
+    margin-right: 7rem;
+}
+
+
+
+#main {
     grid-area: ma;
     display: flex ;
     flex-direction: column;
@@ -73,7 +144,7 @@ main {
     font-family: 'Rubik', sans-serif;    
 }
 
-main h1{
+#main h1{
     margin: 0;
     color: transparent; 
     -webkit-text-stroke-width: 4px;
@@ -120,10 +191,11 @@ article img{
     grid-area: fo;
     background-color: #0e6856;
     height: 25vh;
+    color: white;
 }
 
 #articleImageOne {
-    width: 1500px;
+    width: 400px;
     height: 250px;
     border-radius: 2rem;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
@@ -144,9 +216,302 @@ article img{
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 40px;
-   
+}
+
+#articleLink1 {
+    text-decoration: none;
 }
 
 #articleImageOne:hover{
     transform: scale(1.02);
+}
+
+
+/*__________________________________________________________________________*/
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas:
+        'ma ma ma'
+        'se se se'
+        'fo1 fo2 fo3'
+}
+
+#main_2 {
+    grid-area: ma;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#mainh1 {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+    color: #d9f8f2;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0e6856;
+    text-shadow: 4px 10px 5px rgba(0,0,0,0.2);;
+}
+
+#sec_2 {
+    grid-area: se;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main_pic {
+    display: flex;
+    flex-direction: row;
+}
+
+#terapi {
+    width: 570px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/terapi.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    padding:10px;
+    margin: 2rem;
+    margin-top: 0px;
+    margin-right: 0px;
+
+    transition: all 0.1s ease-in-out;
+}
+
+#terapi p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+    font-family: 'Rubik', sans-serif;
+    color: white; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0e68566f;
+    text-shadow: 4px 10px 5px rgba(0,0,0,0.5);
+}
+
+#socialt {
+    width: 810px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/social.jpg);
+    background-size: cover;
+    background-position: center;
+
+    padding:10px;
+    margin: 2rem;
+    margin-top: 0px;
+
+    transition: all 0.1s ease-in-out;
+
+}
+
+#socialt p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+    font-family: 'Rubik', sans-serif;
+    color: white; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0e68566f;
+    text-shadow: 4px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+#chat {
+    width: 880px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/chat.jpg);
+    background-size: cover;
+    background-position: center;
+
+    padding:10px;
+    margin: 2rem;
+    margin-top: 0px;
+    margin-right: 0px;
+
+    transition: all 0.1s ease-in-out;
+}
+
+#chat p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+    font-family: 'Rubik', sans-serif;
+    color: white; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0e68566f;
+    text-shadow: 4px 10px 5px rgba(0,0,0,0.5);
+}
+
+
+#vetaMer {
+    width: 500px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/article.jpg);
+    background-size: cover;
+    background-position: center;
+
+    padding:10px;
+    margin: 2rem;
+    margin-top: 0px;
+
+    transition: all 0.1s ease-in-out;
+}
+
+#vetaMer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+    font-family: 'Rubik', sans-serif;
+    color: white; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0e68566f;
+    text-shadow: 4px 10px 5px rgba(0,0,0,0.5);
+}
+
+.link2 {
+    text-decoration: none;
+}
+
+#terapi:hover{
+    transform: scale(1.02);
+}
+
+#socialt:hover{
+    transform: scale(1.02);
+}
+
+#chat:hover{
+    transform: scale(1.02);
+}
+
+#vetaMer:hover{
+    transform: scale(1.02);
+}
+
+
+/*__________________________________________________________________________*/
+
+#box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 45vh 45vh auto;
+    grid-template-areas:
+        'ma ma ma'
+        'se se se'
+        'fo1 fo2 fo3'
+}
+
+#main3 {
+    grid-area: ma;
+}
+
+#main3 {
+    grid-area: ma;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+#section3 {
+    grid-area: se;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 1rem;
+    padding-top: 0px;
+  
+}
+
+#bubbla1 {
+    width: 810px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/main_info.jpg);
+    background-size: cover;
+    background-position: 0px -50px;
+
+    padding: 10px;
+    margin: 2rem;
+
+    display: flex;
+}
+
+#text1 {
+    width: 550px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+    
+}
+#text1 p {
+    width: 85%;
+}
+
+
+#text2 {
+    width: 600px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 2rem;
+    margin-left: 10rem;
+
+    
+}
+
+#text2 h1 {
+    font-size: 40px;
+    margin: 5px;
+
+    margin-left: 0px;
+}
+
+#text2 p {
+    width: 95%;
+}
+
+
+#bubbla2 {
+    width: 900px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+
+    background: url(../img/sectionbubbla.jpg);
+    background-size: cover;
+    background-position: center;
+     
+    padding: 10px;
+    margin: 2rem;
+
+    display: flex;
 }

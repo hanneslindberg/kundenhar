@@ -506,10 +506,11 @@ article img{
     border-radius: 2rem;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
 
-    background: url(../img/sectionbubbla.jpg);
+    background: url(/img/sectionbubbla.jpg);
     background-size: cover;
     background-position: center;
-     
+    filter: grayscale(70%); 
+
     padding: 10px;
     margin: 2rem;
 
